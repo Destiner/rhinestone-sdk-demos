@@ -84,7 +84,7 @@ async function send() {
   const address = rhinestoneAccount.getAddress();
   console.info("address", address);
 
-  await prefund(sourceChain, address);
+  // await prefund(sourceChain, address);
   // await prefundUsdc(sourceChain, address)
   await new Promise((resolve) => setTimeout(resolve, 5 * 1000));
   await rhinestoneAccount.deploy(sourceChain);
