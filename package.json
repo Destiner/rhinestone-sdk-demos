@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@rhinestone/sdk": "link:@rhinestone/sdk",
+		"@rhinestone/sdk": "^1.0.35",
 		"viem": "^2.39.3",
 		"vue": "^3.5.24"
 	},
