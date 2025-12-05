@@ -69,7 +69,7 @@ async function send() {
   const signerAccount = walletClientToAccount(walletClient);
   console.info("signer", signerAccount.address);
   const rhinestone = new RhinestoneSDK({
-    apiKey: rhinestoneApiKey,
+    apiKey: isDev || !sourceChain.testnet ? rhinestoneApiKey : undefined,
     endpointUrl: isDev
       ? "https://dev.v1.orchestrator.rhinestone.dev"
       : undefined,
