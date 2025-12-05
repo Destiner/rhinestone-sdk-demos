@@ -4,7 +4,11 @@
 </template>
 
 <script setup lang="ts">
-import { RhinestoneSDK, type TokenSymbol } from "@rhinestone/sdk";
+import {
+  RhinestoneSDK,
+  type TokenSymbol,
+  walletClientToAccount,
+} from "@rhinestone/sdk";
 import {
   type Address,
   createWalletClient,
@@ -13,8 +17,7 @@ import {
   erc20Abi,
 } from "viem";
 import { sepolia } from "viem/chains";
-import { walletClientToAccount } from "../../../sdk/src";
-import { prefund, rhinestoneApiKey } from "../utils";
+import { rhinestoneApiKey } from "../utils";
 
 type Action = "none" | "call" | "transfer_eth" | "transfer_erc20";
 
